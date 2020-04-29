@@ -1,0 +1,61 @@
+<mat-dialog-content>
+    <div class="fieldSet" ALIGN="center">
+        {{message}}
+        <div class="row form-group" style="padding-top: 20px">
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="First Name" class="form-control" id="firstName" required
+                    [(ngModel)]="newUser.firstName" name="firstName">
+            </div>
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="Last Name" class="form-control" id="lastName" required
+                    [(ngModel)]="newUser.lastName" name="lastName">
+            </div>
+        </div>
+        <div class="row form-group" style="padding-top: 2px">
+            <div class="col-xs-4" style="padding-left: 45px">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" 
+                    [(ngModel)]="newUser.dateOfBirth"  placeholder="Date Of Birth">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-xs-4" style="padding-left: 45px ;padding-top: 25px">
+                <mat-radio-group [(ngModel)]="newUser.gender">
+                    <mat-radio-button value="Male"  >MALE</mat-radio-button>
+                    <mat-radio-button value="Female">FEMALE</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+        <div class="row form-group" style="padding-top: 2px">
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="Pan Card" class="form-control" id="panCard" required
+                    [(ngModel)]="newUser.panCard" name="panCard">
+            </div>
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="Aadhar Name" class="form-control" id="adharCard" required
+                    [(ngModel)]="newUser.adharCard" name="adharCard">
+            </div>
+        </div>
+        <div class="row form-group" style="padding-top: 2px">
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="Password" class="form-control" id="password" required
+                    [(ngModel)]="newUser.password" name="password">
+            </div>
+            <div class="col-xs-4" style="padding-left: 45px">
+                <input type="text" placeholder="Confirm Password" class="form-control" id="confirmPassword" required
+                    [(ngModel)]="newUser.lastName" name="confirmPassword">
+            </div>
+        </div>
+        <div class="row form-group" style="padding-top: 2px">
+            <div class="col-xs-4" style="padding-left: 100px">
+                <input type="text" placeholder="Email" class="form-control" style="width: 400px;" id="email"
+                    required [(ngModel)]="newUser.email" name="email">
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button color="primary" (click)="pleaseRegister()">Register me !!</button>
+    <button mat-button color="primary" mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
+</mat-dialog-actions>

@@ -1,0 +1,43 @@
+<app-title-banner></app-title-banner>
+
+<div class="mainContainer">
+    <div class="fieldSet " ALIGN="center">
+      <div STYLE="padding-bottom: 1cm">
+        <label>{{loginBanner}}</label></div>
+      <div class="row form-group" style="padding-left: 150px">
+        <div class="col-xs-4" 	style="padding-top: 10px">
+          <label for="customerId">Customer ID :</label>
+        </div>
+        <div class="col-xs-4"  style ="padding-left: 20px">
+          <input type="text" class="form-control" id="customerId" required [(ngModel)]="user.customerId"
+            name="customerId">
+        </div>
+      </div>
+      <div class="row form-group" style="padding-left: 150px">
+        <div class="col-xs-4" style="padding-top: 10px">
+          <label for="password">Password :</label>      
+        </div>
+        <div class="col-xs-4" style ="padding-left: 45px">
+          <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        </div>
+      </div>
+      <div class="row form-group" style="padding-left: 150px">
+        <div class="col-xs-4" style="padding-top: 10px">
+          <label for="pancard">Pan Card:</label>
+        </div>
+        <div class="col-xs-4" style ="padding-left: 50px">
+          <input type="text" class="form-control" id="pancard" required [(ngModel)]="user.pancard" name="pancard">
+        </div>
+      </div>
+      <div class="row form-group" style="padding-left:300px">
+        <div class="col-xs-2"  style="padding-right:20px">
+          <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+        <div class="col-xs-2">
+          <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+        </div>      
+      </div>
+      <div class="row form-group" style="padding-left: 300px">
+        <button mat-button color="btn-primary" (click)="pleaseRegister()">Register please</button>
+      </div>  
+  </div>

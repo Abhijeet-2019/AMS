@@ -1,0 +1,15 @@
+.titleBanner {
+    border-radius: 200px;
+    background-color:#c3c7b4;
+    color: #180e0e;
+    padding-top:10px;
+    height: 60px;
+    position:relative;
+    text-decoration: blink;
+    font-size:25px;
+    border: 1px solid #000000;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 100% auto;
+}

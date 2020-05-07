@@ -4,6 +4,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule, MatTab} from '@angular/material/tabs';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +17,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
+import { AmsTabComponent } from './ams-tab/ams-tab.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import {MatRadioModule} from '@angular/material/radio';
     AppComponent,    
     LoginComponent,
     TitleBannerComponent,
-    UserRegistrationDialogComponent
+    UserRegistrationDialogComponent,
+    AmsTabComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatRadioModule} from '@angular/material/radio';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTabsModule
 
   ],
   providers: [],

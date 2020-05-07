@@ -12,7 +12,7 @@ public class UserLogin {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "USER_ID")
-        private int userid;
+        private int userId;
         
         @Column(name = "USER_NAME")
         private String userName;
@@ -25,14 +25,14 @@ public class UserLogin {
         
         @OneToMany(fetch = FetchType.LAZY, mappedBy = "userLogin")
         @Cascade(org.hibernate.annotations.CascadeType.ALL)
-        private Set<UserEntitlement> entitlementSet ;
+        private Set<UserEntitlement> entitlementSet;
         
-        public int getUserid() {
-                return userid;
+        public int getUserId() {
+                return userId;
         }
         
-        public void setUserid(int userid) {
-                this.userid = userid;
+        public void setUserId(int userId) {
+                this.userId = userId;
         }
         
         public String getUserName() {

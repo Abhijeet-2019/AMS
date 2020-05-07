@@ -5,6 +5,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {AmsHTTPServiceService} from'../service/ams-httpservice.service';
 import { UserRegistrationDialogComponent } from '../user-registration-dialog/user-registration-dialog.component';
 import { from } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   user: User = new User("", "", "", false);
 
   constructor(private dialog: MatDialog,
+              private router: Router,
               private httpClientService:AmsHTTPServiceService) {     
   }
 
@@ -32,9 +34,9 @@ export class LoginComponent implements OnInit {
     this.httpClientService.validateUserLogin(this.user).then(
       data => {
         if (data) {          
-            console.log("data  --->>"+data);
             if(data.responseStatus =='SUCCESS'){
-              alert(" Login Successfull")
+              alert("success")
+              this.router.navigate(['amsTab']);
             }
         }else{
           alert("Unable to connect to the server");
